@@ -25,8 +25,45 @@ You could run the demo on your AWS Account using AWS SageMaker.
 # Use Case & Dataset
 In this demo, we will use a Turkish language model created by the MDZ Digital Library team (dbmdz) at the Bavarian State Library (https://github.com/stefan-it/turkish-bert). We will use the Hugging Face Model Hub to download the model (https://huggingface.co/dbmdz/bert-base-turkish-uncased) and then fine-tune it to 2 very different tasks:
 
-* Sentiment Analysis
-* Question Answering
+## Use Case 1: Sentiment Analysis
+
+**Input Text**: 
+
+Following input text is provided to the model.
+
+> Bu film biraz sıkıcıydı.
+
+**Answer**: 
+Following sentiment is predicted:
+
+> Negative (Confidence score: 0.9593140482902527)
+
+## Use Case 2: Question Answering
+
+**Context**: 
+
+Following paragraph is provided to the model.
+
+> ABASIYANIK, Sait Faik. Hikayeci (Adapazarı 23 Kasım 1906-İstanbul 11 Mayıs 1954).
+İlk öğrenimine Adapazarı’nda Rehber-i Terakki Mektebi’nde başladı. İki yıl kadar Adapazarı İdadisi’nde okudu.
+İstanbul Erkek Lisesi’nde devam ettiği orta öğrenimini Bursa Lisesi’nde tamamladı (1928). İstanbul Edebiyat
+Fakültesi’ne iki yıl devam ettikten sonra babasının isteği üzerine iktisat öğrenimi için İsviçre’ye gitti.
+Kısa süre sonra iktisat öğrenimini bırakarak Lozan’dan Grenoble’a geçti. Üç yıl başıboş bir edebiyat öğrenimi
+gördükten sonra babası tarafından geri çağrıldı (1933). Bir müddet Halıcıoğlu Ermeni Yetim Mektebi'nde Türkçe
+gurup dersleri öğretmenliği yaptı. Ticarete atıldıysa da tutunamadı. Bir ay Haber gazetesinde adliye muhabirliği
+yaptı (1942). Babasının ölümü üzerine aileden kalan emlakin geliri ile avare bir hayata başladı. Evlenemedi.
+Yazları Burgaz adasındaki köşklerinde, kışları Şişli’deki apartmanlarında annesi ile beraber geçen bu fazla
+içkili bohem hayatı ömrünün sonuna kadar sürdü.
+
+**Question**: 
+Following question is provided to the model:
+
+> Ne zaman avare bir hayata başladı?
+
+**Answer**: 
+Following answer is predicted:
+
+> Babasının ölümü üzerine.
 
 
 # Disclaimer
